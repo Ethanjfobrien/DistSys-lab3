@@ -9,6 +9,21 @@ package dataTypes;
  *
  * @author puser
  */
-class Message {
-    
+public class Message {
+    private final String author;
+    private String messageBody;
+    //TODO timestamp
+
+    public Message(String author, String messageBody) {
+        this.author = author;
+        this.messageBody = messageBody;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getMessageBody() {
+        return messageBody;
+    }
 }

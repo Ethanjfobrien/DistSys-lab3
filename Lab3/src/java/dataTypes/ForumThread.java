@@ -13,16 +13,29 @@ import java.util.ArrayList;
  */
 public class ForumThread {
     private final String title;
-    private ArrayList<String> keywords;
+    private String[] keywords;
     private ArrayList<Message> messages;
+    
 
-    public ForumThread(String title, ArrayList<String> keywords) {
+    public ForumThread(String title, String[] keywords) {
         this.title = title;
         this.keywords = keywords;
     }
     
     public void addMessage(Message message) {
         messages.add(message);
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String[] getKeywords() {
+        return keywords;
+    }
+
+    public Message[] getMessages() {
+        return messages.toArray( new Message[1]);
     }
     
 }
